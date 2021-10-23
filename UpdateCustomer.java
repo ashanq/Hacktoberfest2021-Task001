@@ -4,21 +4,21 @@ public class UpdateCustomerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String id = request.getParameter("id");
-		String name = request.getParameter("Name");//
+		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone"); 
 		String username = request.getParameter("un"); 
-		String pass = request.getParameter(pass");//
+		String pass = request.getParameter("pass");
 		
-		boolean isTruee; //
+		boolean isTrue; 
 		
-		isTrue = CustomerDBUtil.updatecustomer(id, name, email, phoneNumber, username, pass); //
+		isTrue = CustomerDBUtil.updatecustomer(id, name, email, phone, username, pass); 
 		
-		if(isTrue ==/ true) { //
+		if(isTrue == true) { 
 			
 			
 			
-			RequestDispatcher dis = request.getRequestDispatcher("success.jsp);//
+			RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
 			dis.forward(request, response);
 		}
 		
